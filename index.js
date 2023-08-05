@@ -1,29 +1,17 @@
 const express = require('express');
-const router = require('./routes/main_routes');
-
-const mongoose = require('mongoose');
-
-require('dotenv').config();
-const URI = process.env.MONGO_URI;
-const PORT = process.env.PORT;
-
-// const app = express();
-// const cors = require('cors');
-
-// app.use(cors());
-// app.use(express.json());
-
+const mongoose = require('mongoose')
 const app = express();
 const cors = require("cors")
-
-
 app.use(cors())
+require("dotenv").config();
+const PORT = process.env.PORT || 8000
+const URI = process.env.MONGO_URI
+
 
 app.get("/", (req, res) => {
     res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.use('/api', router);
 
 mongoose.connect(URI)
   .then(() => {

@@ -1,4 +1,4 @@
-const connectDB = require('./connect_mongo')
+const connectDB = require('../connect_mongo')
 connectDB()
 
 const express = require('express')

@@ -19,7 +19,5 @@ app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
 
-// const connectDB = require('./connect_mongo')
-// connectDB()
 
 module.exports = { app };

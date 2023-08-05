@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
-
+const connectDB = require('./connect_mongo')
+connectDB()
 const search = require('../controllers/search')
 const users = require('../controllers/ShowData')
 const add = require('../controllers/add')

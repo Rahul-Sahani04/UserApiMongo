@@ -1,5 +1,5 @@
 {
-  "name": "fortune-api",
+  "name": "mongodb-user-api",
   "version": "1.0.0",
   "description": "A Fortune cookie messages api",
   "main": "index.js",

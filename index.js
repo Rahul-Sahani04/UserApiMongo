@@ -1,14 +1,15 @@
 const express = require('express');
-const { getUsers } = require('./controllers/ShowData')
-const { addUsers } = require('./controllers/add')
-const { authUser } = require('./controllers/auth')
-const { deleteUser } = require('./controllers/delete')
-const { searchUser } = require('./controllers/search')
-const { updateUser } = require('./controllers/update')
+// const { getUsers } = require('./controllers/ShowData')
+// const { addUsers } = require('./controllers/add')
+// const { authUser } = require('./controllers/auth')
+// const { deleteUser } = require('./controllers/delete')
+// const { searchUser } = require('./controllers/search')
+// const { updateUser } = require('./controllers/update')
 
 const app = express();
 const cors = require("cors")
 app.use(express.json())
+app.use(cors())
 
 require("dotenv").config();
 const port = process.env.PORT || 8000

@@ -7,17 +7,21 @@ require('dotenv').config();
 const URI = process.env.MONGO_URI;
 const PORT = process.env.PORT;
 
+// const app = express();
+// const cors = require('cors');
+
+// app.use(cors());
+// app.use(express.json());
+
 const app = express();
-const cors = require('cors');
+const cors = require("cors")
 
-app.use(cors());
-app.use(express.json());
 
-app.get('/', (request, response) => {
-  response.json({
-    info: 'Node.js, Express, and Postgres API'
-  })
-})
+app.use(cors())
+
+app.get("/", (req, res) => {
+    res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
+});
 
 app.use('/api', router);
 

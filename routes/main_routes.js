@@ -9,13 +9,13 @@ const update = require('../controllers/update')
 
 const auth = require('../controllers/auth')
 
-// router.get('/', (request, response) => {
-//     response.json({
-//         info: 'Node.js, Express, and Postgres API'
-//     })
-// })
-router.post('/users/auth', auth.authUser)
+router.get('/', (request, response) => {
+    response.json({
+        info: 'Node.js, Express, and Postgres API'
+    })
+})
 
+router.post('/users/auth', auth.authUser)
 router.get('/users', users.getUsers)
 router.get('/users/search', search.searchUser)
 router.post('/users/add', add.addUsers)

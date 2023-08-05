@@ -1,7 +1,7 @@
 {
-  "name": "userapi",
+  "name": "mongodbuserapi",
   "version": "1.0.0",
-  "description": "A user api",
+  "description": "A MONGODB user api",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -17,6 +17,7 @@
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.1",
     "nodemon": "^3.0.1",
+    "now": "^21.0.1",
     "pg": "^8.11.1",
     "pool": "^0.4.1",
     "sequelize": "^6.32.1"

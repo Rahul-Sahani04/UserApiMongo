@@ -10,7 +10,7 @@ const update = require('../controllers/update')
 const auth = require('../controllers/auth')
 
 router.get('/', (request, response) => {
-    response.json({
+    response.send({
         info: 'Node.js, Express, and Postgres API'
     })
 })

@@ -15,12 +15,12 @@ router.get('/', (request, response) => {
     })
 })
 
-router.post('/users/auth', auth.authUser)
-router.get('/users', users.getUsers)
-router.get('/users/search', search.searchUser)
-router.post('/users/add', add.addUsers)
-router.post('/users/:id', update.updateUser)
-router.delete('/users/:id', deleteUser.deleteUser)
+router.post('/auth', auth.authUser)
+router.get('/all', users.getUsers)
+router.get('/search', search.searchUser)
+router.post('/add', add.addUsers)
+router.post('/:id', update.updateUser)
+router.delete('/:id', deleteUser.deleteUser)
 
 
 module.exports = router;

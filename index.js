@@ -12,13 +12,6 @@ app.get("/", (req, res) => {
     res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-
-mongoose.connect(URI)
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`App running on port ${PORT}.`);
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}.`);
+});

@@ -1,5 +1,6 @@
 const express = require('express');
-const routes = require('./routes/main_routes');
+const router = require('./routes/main_routes');
+
 const mongoose = require('mongoose');
 
 require('dotenv').config();
@@ -12,7 +13,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-app.use('/', routes); // Use the imported router as middleware
+app.use('/', router); // Use the imported router as middleware
 
 mongoose.connect(URI)
   .then(() => {

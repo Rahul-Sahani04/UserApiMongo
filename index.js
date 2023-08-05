@@ -1,8 +1,6 @@
 const express = require('express');
 // const routes = require('./routes/routes') 
 // const mongo = require('mongoose')
-const connectDB = require('./connect_mongo')
-connectDB()
 
 const app = express();
 const cors = require("cors")
@@ -12,9 +10,11 @@ const port = process.env.PORT || 8000
 
 
 app.get("/", (req, res) => {
-    res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
+  res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
+const connectDB = require('./connect_mongo')
+connectDB()
 // app.use("/users", routes)
 
 app.listen(port, () => {

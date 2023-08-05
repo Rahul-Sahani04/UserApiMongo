@@ -1,11 +1,8 @@
 const express = require('express');
-const { addUsers } = require('./controllers/add')
-const { deleteUser } = require('./controllers/delete')
-const { searchUser } = require('./controllers/search')
-const { getUsers } = require('./controllers/ShowData')
-const { updateUser } = require('./controllers/update')
-const { authUser } = require('./controllers/auth')
-
+const {addCookie} = require('./routes/add')
+const {deleteCookie} = require('./routes/delete')
+const {getRandom} = require('./routes/getRandom')
+const {ShowData} = require('./routes/ShowData')
 
 const app = express();
 const cors = require("cors")
@@ -15,13 +12,13 @@ const port = process.env.PORT || 8000
 
 
 app.get("/", (req, res) => {
-  res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availablecontrollers: ["/users/all", "/users/random", "/users/add"] });
+    res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.get('/users/all', getUsers)
-app.get('/users/add', addUsers)
-app.post('/users/search', searchUser)
-app.delete('/users/:id', deleteUser)
+app.get('/cookie/all', ShowData)
+app.get('/cookie/random', getRandom)
+app.post('/cookie/add', addCookie)
+app.delete('/cookie/:id', deleteCookie)
 
 
 app.listen(port, () => {

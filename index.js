@@ -14,7 +14,9 @@ app.get("/", (req, res) => {
   res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.use("/api", APIroutes)
+// app.use("/api", APIroutes)
+
+console.log("API WORKING")
 
 
 app.listen(port, () => {

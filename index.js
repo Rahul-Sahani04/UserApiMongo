@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./routes/routes')
+// const routes = require('./routes/routes') 
 
 const app = express();
 const cors = require("cors")
@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
     res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.use("/users", routes)
+// app.use("/users", routes)
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);

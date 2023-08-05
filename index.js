@@ -18,11 +18,11 @@ app.get("/", (req, res) => {
   res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.get("/users/all", (req, res) => {
+app.get("/all", (req, res) => {
   res.json({ users: "ALL" });
 });
 
-app.get("/users/search", (req, res) => {
+app.get("/search", (req, res) => {
   res.json({ users: "Searching" });
 });
 

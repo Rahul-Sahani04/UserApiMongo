@@ -13,12 +13,12 @@ app.get("/", (req, res) => {
   res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-const connectDB = require('./connect_mongo')
-connectDB()
-// app.use("/users", routes)
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
+
+const connectDB = require('./connect_mongo')
+connectDB()
 
 module.exports = { app };

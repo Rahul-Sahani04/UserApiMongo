@@ -12,14 +12,6 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.json({
-    page: "Main page!",
-    info: 'Node.js, Express, and Postgres API',
-    //  availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] 
-  });
-});
-
 app.use('/', routes); // Use the imported router as middleware
 
 mongoose.connect(URI)

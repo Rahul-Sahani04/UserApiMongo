@@ -1,5 +1,5 @@
 const express = require('express');
-// const { getUsers } = require('./controllers/ShowData')
+const { getUsers } = require('./controllers/ShowData')
 // const { addUsers } = require('./controllers/add')
 // const { authUser } = require('./controllers/auth')
 // const { deleteUser } = require('./controllers/delete')
@@ -19,9 +19,7 @@ app.get("/", (req, res) => {
   res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.get("/users/all", (req, res) => {
-  res.send({ users: "ALL" });
-});
+app.get("/users/all", getUsers);
 
 app.get("/users/search", (req, res) => {
   res.send({ users: "Searching" });

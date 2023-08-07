@@ -16,7 +16,7 @@ Basic understanding of RESTful APIs.
 Clone this repository.
 
 ```bash
-Copy code
+
 git clone https://github.com/your-username/user-api.git
 ```
 ```bash
@@ -25,7 +25,6 @@ cd user-api
 
 Install dependencies.
 ```bash
-Copy code
 npm install
 ```
 
@@ -34,7 +33,6 @@ Configure environment variables.
 ## Start the server.
 
 ```bash
-Copy code
 npm start
 ```
 
@@ -45,19 +43,20 @@ Send a POST request to /api/users/register with user data in the request body.
 Login:
 Send a POST request to /api/users/login with valid credentials. You will receive a JWT token upon successful login.
 
-Access User Data:
+### Access User Data:
 Include the received JWT token in the Authorization header for authenticated routes to access user data.
 
-CRUD Operations:
+### CRUD Operations:
 
-Create: Send a POST request to /api/users with new user data.
-Read: Send a GET request to /api/users/:userId to fetch user details.
-Update: Send a PUT request to /api/users/:userId with updated user data.
-Delete: Send a DELETE request to /api/users/:userId to delete a user.
-Contributing
+Create: Send a POST request to /users/add with new user data.
+Read: Send a GET request to /users/search to fetch user details.
+Update: Send a PUT request to /users/:userId with updated user data.
+Delete: Send a DELETE request to /users/:userId to delete a user.
+
+## Contributing
 Contributions are welcome! If you find any issues or improvements, feel free to open a pull request.
 
-License
-This project is licensed under the MIT License.
+## License
+This project is licensed under the [MIT License](https://mit-license.org/).
 
-Feel free to customize this readme.md to better suit your project's specific details and requirements. Make sure to replace placeholders like your-username and provide accurate and up-to-date information.
+Feel free to customize this readme.md to better suit your project's specific details and requirements. Make sure to provide accurate and up-to-date information.

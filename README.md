@@ -1,2 +1,63 @@
-# User API 
-User API made on Mongo DB for MERN projects or other uses.
+# User API for MERN Projects
+This repository contains a User API built on top of MongoDB, designed to be integrated into MERN (MongoDB, Express, React, Node.js) stack projects or for other use cases. The API provides basic CRUD (Create, Read, Update, Delete) operations for managing user data.
+
+## Features
+User Management: Perform CRUD operations on user data, including creating new users, fetching user details, updating user information, and deleting users.
+Authentication: Secure endpoints with authentication to ensure only authorized users can access and modify user data.
+Validation: Input data is validated to ensure integrity and consistency.
+Scalable: Built on top of MongoDB, the API can handle a large number of users and is suitable for scaling up.
+
+## Prerequisites
+Node.js and npm installed.
+MongoDB server running.
+Basic understanding of RESTful APIs.
+
+## Installation
+Clone this repository.
+
+```bash
+Copy code
+git clone https://github.com/your-username/user-api.git
+```
+```bash
+cd user-api
+```
+
+Install dependencies.
+```bash
+Copy code
+npm install
+```
+
+Configure environment variables.
+
+## Start the server.
+
+```bash
+Copy code
+npm start
+```
+
+## Usage
+Register a new user:
+Send a POST request to /api/users/register with user data in the request body.
+
+Login:
+Send a POST request to /api/users/login with valid credentials. You will receive a JWT token upon successful login.
+
+Access User Data:
+Include the received JWT token in the Authorization header for authenticated routes to access user data.
+
+CRUD Operations:
+
+Create: Send a POST request to /api/users with new user data.
+Read: Send a GET request to /api/users/:userId to fetch user details.
+Update: Send a PUT request to /api/users/:userId with updated user data.
+Delete: Send a DELETE request to /api/users/:userId to delete a user.
+Contributing
+Contributions are welcome! If you find any issues or improvements, feel free to open a pull request.
+
+License
+This project is licensed under the MIT License.
+
+Feel free to customize this readme.md to better suit your project's specific details and requirements. Make sure to replace placeholders like your-username and provide accurate and up-to-date information.

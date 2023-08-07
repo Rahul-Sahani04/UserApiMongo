@@ -1,2 +1,2 @@
-# Fortune Cookie API
- Just a normal everyday fortune cookie for you.
+# User API 
+User API made on Mongo DB for MERN projects or other uses.

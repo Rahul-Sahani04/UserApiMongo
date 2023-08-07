@@ -1,29 +1,25 @@
 {
-  "name": "mongodb-user-api",
+  "name": "mongodbuserapi",
   "version": "1.0.0",
-  "description": "A Fortune cookie messages api",
+  "description": "A MONGODB user api",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon server.js"
   },
   "author": "Rahul Sahani",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "dotenv-expand": "^10.0.0",
     "express": "^4.18.2",
-    "mongoose": "^7.4.2",
-    "nodemon": "^3.0.1"
-  },
-  "devDependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "dotenv-expand": "^10.0.0",
-    "express": "^4.18.2",
-    "mongoose": "^7.4.2",
-    "nodemon": "^3.0.1"
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.4.1",
+    "nodemon": "^3.0.1",
+    "now": "^21.0.1",
+    "pg": "^8.11.1",
+    "pool": "^0.4.1",
+    "sequelize": "^6.32.1"
   }
 }

@@ -1,9 +1,9 @@
-// const User = require('../models/User')
+const User = require('../models/User')
 
-const getUsers = (request, response) => {
+const getUsers = async (request, response) => {
   try {
-    const users = User.find(); // Perform a query to fetch all users from MongoDB
-    response.send({ status: 200, users: "USERS" });
+    const users = await User.find().sort({ age: 1 }); // Perform a query to fetch all users from MongoDB
+    response.send({ status: 200, users });
   } catch (error) {
     response.send({ status: 500, error: 'Internal Server Error' });
   }

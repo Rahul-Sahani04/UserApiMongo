@@ -1,39 +1,27 @@
 const express = require('express');
-const { getUsers } = require('./controllers/ShowData')
-// const { addUsers } = require('./controllers/add')
-// const { authUser } = require('./controllers/auth')
-// const { deleteUser } = require('./controllers/delete')
-// const { searchUser } = require('./controllers/search')
-// const { updateUser } = require('./controllers/update')
-
+const mongoose = require('mongoose')
+const routes = require('./routes/main_routes')
 const app = express();
 const cors = require("cors")
-app.use(express.json())
 app.use(cors())
-
+app.use(express.json())
 require("dotenv").config();
-const port = process.env.PORT || 8000
+const PORT = process.env.PORT || 4000
+const URI = process.env.MONGO_URI
 
 
 app.get("/", (req, res) => {
-  res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
+    res.json({ page: "Main page!", info: 'Node.js, Express, and Postgres API', availableRoutes: ["/cookie/all", "/cookie/random", "/cookie/add"] });
 });
 
-app.get("/users/all", getUsers);
+app.use("/", routes)
 
-app.get("/users/search", (req, res) => {
-  res.send({ users: "Searching" });
-});
-
-
-// app.use("/api", APIroutes)
-
-console.log("API WORKING")
-
-
-app.listen(port, () => {
-  console.log(`Server is running on port: ${port}`);
-});
-
-
-module.exports = { app };
+mongoose.connect(URI)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(`App running on port ${PORT}.`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });

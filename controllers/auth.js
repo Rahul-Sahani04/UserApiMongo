@@ -20,7 +20,7 @@ const authUser = async (request, response) => {
                     if (!user) {
                         return response.send({ status: 404, message: "User not found." });
                     }
-                    response.send({ status: 200, exists: true });
+                    response.send({ status: 200, user: user});
                 })
                 .catch((error) => {
                     response.send({ status: 500, message: "Internal server error." });

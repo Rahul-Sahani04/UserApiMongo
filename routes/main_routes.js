@@ -1,8 +1,6 @@
-const connectDB = require('../connect_mongo')
-connectDB()
-
 const express = require('express')
 const router = express.Router()
+
 const search = require('../controllers/search')
 const users = require('../controllers/ShowData')
 const add = require('../controllers/add')
@@ -11,18 +9,18 @@ const update = require('../controllers/update')
 
 const auth = require('../controllers/auth')
 
-router.get('/', (request, response) => {
+router.get('/users', (request, response) => {
     response.json({
         info: 'Node.js, Express, and Postgres API'
     })
 })
+router.post('/users/auth', auth.authUser)
 
-router.post('/auth', auth.authUser)
-router.get('/all', users.getUsers)
-router.get('/search', search.searchUser)
-router.post('/add', add.addUsers)
-router.post('/:id', update.updateUser)
-router.delete('/:id', deleteUser.deleteUser)
+router.get('/users/all', users.getUsers)
+router.get('/users/search', search.searchUser)
+router.post('/users/add', add.addUsers)
+router.post('/users/:id', update.updateUser)
+router.delete('/users/:id', deleteUser.deleteUser)
 
 
 module.exports = router;

@@ -33,7 +33,7 @@ Configure environment variables.
 ## Start the server.
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Usage

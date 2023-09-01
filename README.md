@@ -17,7 +17,7 @@ Clone this repository.
 
 ```bash
 
-git clone https://github.com/your-username/user-api.git
+git clone https://github.com/Rahul-Sahani04/UserApiMongo
 ```
 ```bash
 cd user-api

@@ -48,10 +48,10 @@ Include the received JWT token in the Authorization header for authenticated rou
 
 ### CRUD Operations:
 
-Create: Send a POST request to /users/add with new user data.
-Read: Send a GET request to /users/search to fetch user details.
-Update: Send a PUT request to /users/:userId with updated user data.
-Delete: Send a DELETE request to /users/:userId to delete a user.
+- Create: Send a POST request to /users/add with new user data.
+- Read: Send a GET request to /users/search to fetch user details.
+- Update: Send a PUT request to /users/:userId with updated user data.
+- Delete: Send a DELETE request to /users/:userId to delete a user.
 
 ## Contributing
 Contributions are welcome! If you find any issues or improvements, feel free to open a pull request.
